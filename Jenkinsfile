@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'git@github.com:tavoparra/next-graphql-test.git'
+                git branch: 'main', url: 'https://github.com/tavoparra/next-graphql-test'
             }
         }
 
