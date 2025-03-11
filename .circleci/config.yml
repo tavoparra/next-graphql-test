@@ -55,9 +55,14 @@ workflows:
   build-and-test:
     jobs:
       - test-node
-      - build-node:
+      - approve-build:
+          type: approval
           requires:
             - test-node
+      - build-node:
+          requires:
+            - approve-build
     # - deploy:
     #     requires:
     #       - build-node
+Next: set up your triggers ->
